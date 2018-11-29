@@ -1,5 +1,9 @@
 --- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/InkoHX/LeveLibrary
 branches:
-- master
-projects: []
+  - master
+projects:
+  LeveLibrary:
+    path: ""
+    type: library
+    model: virion
 ...
