@@ -1,0 +1,8 @@
+digraph "クラス階層図"
+{
+ // INTERACTIVE_SVG=YES
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="LevelAPI",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_inko_h_x_1_1_leve_library_1_1_level_a_p_i.html"];
+}

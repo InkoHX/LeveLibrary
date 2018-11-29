@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>LeveLibrary: src/InkoHX/LeveLibrary/event/level/PlayerLevelUpEvent.php ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">LeveLibrary
+   &#160;<span id="projectnumber">0.0.1</span>
+   </div>
+   <div id="projectbrief">A library that can easily create a level system</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_player_level_up_event_8php_source.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">PlayerLevelUpEvent.php</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_player_level_up_event_8php.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?php</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_inko_h_x_1_1_leve_library_1_1event_1_1level.html">InkoHX\LeveLibrary\event\level</a>;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;use <a class="code" href="namespacepocketmine_1_1event_1_1_cancellable.html">pocketmine\event\Cancellable</a>;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;use <a class="code" href="namespacepocketmine_1_1event_1_1player_1_1_player_event.html">pocketmine\event\player\PlayerEvent</a>;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;use <a class="code" href="namespacepocketmine_1_1_player.html">pocketmine\Player</a>;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_inko_h_x_1_1_leve_library_1_1event_1_1level_1_1_player_level_up_event.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_inko_h_x_1_1_leve_library_1_1event_1_1level_1_1_player_level_up_event.html">PlayerLevelUpEvent</a> <span class="keyword">extends</span> PlayerEvent implements Cancellable</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">private</span> $oldLevel;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">private</span> $newLevel;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div><div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_inko_h_x_1_1_leve_library_1_1event_1_1level_1_1_player_level_up_event.html#a2d8fda9b36a8cef22311ea32fd93c6bf">   30</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_inko_h_x_1_1_leve_library_1_1event_1_1level_1_1_player_level_up_event.html#a2d8fda9b36a8cef22311ea32fd93c6bf">__construct</a>(Player $player, <span class="keywordtype">int</span> $oldLevel, <span class="keywordtype">int</span> $newLevel)</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    {</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        $this-&gt;player = $player;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        $this-&gt;oldLevel = $oldLevel;</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        $this-&gt;newLevel = $newLevel;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div><div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_inko_h_x_1_1_leve_library_1_1event_1_1level_1_1_player_level_up_event.html#ac57c85a8d339d5f726dd1e2b59c1cad0">   40</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_inko_h_x_1_1_leve_library_1_1event_1_1level_1_1_player_level_up_event.html#ac57c85a8d339d5f726dd1e2b59c1cad0">getOldLevel</a>(): int</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    {</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">return</span> $this-&gt;oldLevel;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div><div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_inko_h_x_1_1_leve_library_1_1event_1_1level_1_1_player_level_up_event.html#ab2403260576125dc705dabf079f1adbb">   48</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_inko_h_x_1_1_leve_library_1_1event_1_1level_1_1_player_level_up_event.html#ab2403260576125dc705dabf079f1adbb">getNewLevel</a>(): int</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    {</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">return</span> $this-&gt;newLevel;</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div><div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_inko_h_x_1_1_leve_library_1_1event_1_1level_1_1_player_level_up_event.html#a1902daa678a88e51b4f2cdfd90c0aa42">   58</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_inko_h_x_1_1_leve_library_1_1event_1_1level_1_1_player_level_up_event.html#a1902daa678a88e51b4f2cdfd90c0aa42">setNewLevel</a>(<span class="keywordtype">int</span> $newLevel): void</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    {</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        $this-&gt;newLevel = $newLevel;</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    }</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div><div class="ttc" id="class_inko_h_x_1_1_leve_library_1_1event_1_1level_1_1_player_level_up_event_html_a1902daa678a88e51b4f2cdfd90c0aa42"><div class="ttname"><a href="class_inko_h_x_1_1_leve_library_1_1event_1_1level_1_1_player_level_up_event.html#a1902daa678a88e51b4f2cdfd90c0aa42">InkoHX\LeveLibrary\event\level\PlayerLevelUpEvent\setNewLevel</a></div><div class="ttdeci">setNewLevel(int $newLevel)</div><div class="ttdef"><b>Definition:</b> <a href="_player_level_up_event_8php_source.html#l00058">PlayerLevelUpEvent.php:58</a></div></div>
+<div class="ttc" id="class_inko_h_x_1_1_leve_library_1_1event_1_1level_1_1_player_level_up_event_html"><div class="ttname"><a href="class_inko_h_x_1_1_leve_library_1_1event_1_1level_1_1_player_level_up_event.html">InkoHX\LeveLibrary\event\level\PlayerLevelUpEvent</a></div><div class="ttdef"><b>Definition:</b> <a href="_player_level_up_event_8php_source.html#l00015">PlayerLevelUpEvent.php:15</a></div></div>
+<div class="ttc" id="namespacepocketmine_1_1_player_html"><div class="ttname"><a href="namespacepocketmine_1_1_player.html">Player</a></div></div>
+<div class="ttc" id="class_inko_h_x_1_1_leve_library_1_1event_1_1level_1_1_player_level_up_event_html_a2d8fda9b36a8cef22311ea32fd93c6bf"><div class="ttname"><a href="class_inko_h_x_1_1_leve_library_1_1event_1_1level_1_1_player_level_up_event.html#a2d8fda9b36a8cef22311ea32fd93c6bf">InkoHX\LeveLibrary\event\level\PlayerLevelUpEvent\__construct</a></div><div class="ttdeci">__construct(Player $player, int $oldLevel, int $newLevel)</div><div class="ttdef"><b>Definition:</b> <a href="_player_level_up_event_8php_source.html#l00030">PlayerLevelUpEvent.php:30</a></div></div>
+<div class="ttc" id="namespacepocketmine_1_1event_1_1player_1_1_player_event_html"><div class="ttname"><a href="namespacepocketmine_1_1event_1_1player_1_1_player_event.html">PlayerEvent</a></div></div>
+<div class="ttc" id="namespacepocketmine_1_1event_1_1_cancellable_html"><div class="ttname"><a href="namespacepocketmine_1_1event_1_1_cancellable.html">Cancellable</a></div></div>
+<div class="ttc" id="namespace_inko_h_x_1_1_leve_library_1_1event_1_1level_html"><div class="ttname"><a href="namespace_inko_h_x_1_1_leve_library_1_1event_1_1level.html">InkoHX\LeveLibrary\event\level</a></div><div class="ttdef"><b>Definition:</b> <a href="_player_level_change_event_8php_source.html#l00008">PlayerLevelChangeEvent.php:8</a></div></div>
+<div class="ttc" id="class_inko_h_x_1_1_leve_library_1_1event_1_1level_1_1_player_level_up_event_html_ac57c85a8d339d5f726dd1e2b59c1cad0"><div class="ttname"><a href="class_inko_h_x_1_1_leve_library_1_1event_1_1level_1_1_player_level_up_event.html#ac57c85a8d339d5f726dd1e2b59c1cad0">InkoHX\LeveLibrary\event\level\PlayerLevelUpEvent\getOldLevel</a></div><div class="ttdeci">getOldLevel()</div><div class="ttdef"><b>Definition:</b> <a href="_player_level_up_event_8php_source.html#l00040">PlayerLevelUpEvent.php:40</a></div></div>
+<div class="ttc" id="class_inko_h_x_1_1_leve_library_1_1event_1_1level_1_1_player_level_up_event_html_ab2403260576125dc705dabf079f1adbb"><div class="ttname"><a href="class_inko_h_x_1_1_leve_library_1_1event_1_1level_1_1_player_level_up_event.html#ab2403260576125dc705dabf079f1adbb">InkoHX\LeveLibrary\event\level\PlayerLevelUpEvent\getNewLevel</a></div><div class="ttdeci">getNewLevel()</div><div class="ttdef"><b>Definition:</b> <a href="_player_level_up_event_8php_source.html#l00048">PlayerLevelUpEvent.php:48</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_995e8e97e36c21f4130bbe47ca6946ae.html">InkoHX</a></li><li class="navelem"><a class="el" href="dir_9079ff7c0ce98b6cf4459401b8403085.html">LeveLibrary</a></li><li class="navelem"><a class="el" href="dir_a3f3059094a5ebe475524d518ca88c98.html">event</a></li><li class="navelem"><a class="el" href="dir_7b83899dd80fc84cf6c36bcd1c131b6c.html">level</a></li><li class="navelem"><a class="el" href="_player_level_up_event_8php.html">PlayerLevelUpEvent.php</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
+</body>
+</html>
