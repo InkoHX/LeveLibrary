@@ -1,7 +1,7 @@
 {
   "name": "inkohx/levelibrary",
-  "description": "LevelSystem",
-  "type": "library",
+  "description": "A library that can easily create a level system",
+  "type": "project",
   "license": "MIT",
   "authors": [
     {
