@@ -23,3 +23,9 @@
 /app/Config/core.php
 /app/Config/database.php
 /vendors/*
+
+# Composer
+composer.phar
+
+# JetBrains IDE
+.idea
