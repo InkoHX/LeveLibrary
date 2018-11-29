@@ -5,7 +5,7 @@
  * GitHub: https://github.com/InkoHX/LeveLibrary
  */
 
-namespace inkohx\LeveLibrary;
+namespace InkoHX\LeveLibrary;
 
 
 use pocketmine\utils\Config;
