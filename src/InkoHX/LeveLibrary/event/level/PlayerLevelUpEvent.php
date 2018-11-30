@@ -7,7 +7,6 @@
 
 namespace InkoHX\LeveLibrary\event\level;
 
-
 use pocketmine\event\Cancellable;
 use pocketmine\event\player\PlayerEvent;
 use pocketmine\Player;
@@ -24,8 +23,8 @@ class PlayerLevelUpEvent extends PlayerEvent implements Cancellable
      * PlayerLevelUpEvent constructor.
      *
      * @param Player $player
-     * @param int $oldLevel
-     * @param int $newLevel
+     * @param int    $oldLevel
+     * @param int    $newLevel
      */
     public function __construct(Player $player, int $oldLevel, int $newLevel)
     {

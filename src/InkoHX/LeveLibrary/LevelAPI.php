@@ -26,7 +26,7 @@ class LevelAPI
      */
     public static function init(): void
     {
-        self::$path = Server::getInstance()->getDataPath() . '/Library/LeveLibrary/';
+        self::$path = Server::getInstance()->getDataPath().'/Library/LeveLibrary/';
     }
 
     public static function Auto(Player $player, $xp = 10, $max = 50)
@@ -42,7 +42,7 @@ class LevelAPI
 
     /**
      * @param Player $player
-     * @param int $level
+     * @param int    $level
      *
      * @return void
      */
@@ -58,7 +58,7 @@ class LevelAPI
 
     /**
      * @param Player $player
-     * @param int $level
+     * @param int    $level
      *
      * @return void
      */
@@ -80,12 +80,13 @@ class LevelAPI
     public static function getLevel(Player $player): int
     {
         $db = new DataFile($player->getXuid());
+
         return $db->get('level');
     }
 
     /**
      * @param Player $player
-     * @param int $xp
+     * @param int    $xp
      *
      * @return void
      */
@@ -101,7 +102,7 @@ class LevelAPI
 
     /**
      * @param Player $player
-     * @param int $xp
+     * @param int    $xp
      *
      * @return void
      */
@@ -123,12 +124,13 @@ class LevelAPI
     public static function getXP(Player $player): int
     {
         $db = new DataFile($player->getXuid());
+
         return $db->get('xp');
     }
 
     /**
      * @param Player $player
-     * @param int $max
+     * @param int    $max
      *
      * @return void
      */
@@ -144,7 +146,7 @@ class LevelAPI
 
     /**
      * @param Player $player
-     * @param int $max
+     * @param int    $max
      *
      * @return void
      */
@@ -166,6 +168,7 @@ class LevelAPI
     public static function getMaxXP(Player $player): int
     {
         $db = new DataFile($player->getXuid());
+
         return $db->get('maxxp');
     }
 

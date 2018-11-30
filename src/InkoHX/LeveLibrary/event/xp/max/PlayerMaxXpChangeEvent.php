@@ -7,7 +7,6 @@
 
 namespace InkoHX\LeveLibrary\event\xp\max;
 
-
 use pocketmine\event\Cancellable;
 use pocketmine\event\player\PlayerEvent;
 use pocketmine\Player;
@@ -24,8 +23,8 @@ class PlayerMaxXpChangeEvent extends PlayerEvent implements Cancellable
      * PlayerMaxXpChangeEvent constructor.
      *
      * @param Player $player
-     * @param int $oldMax
-     * @param int $newMax
+     * @param int    $oldMax
+     * @param int    $newMax
      */
     public function __construct(Player $player, int $oldMax, int $newMax)
     {
