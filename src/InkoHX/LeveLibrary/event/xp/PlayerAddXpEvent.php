@@ -7,7 +7,6 @@
 
 namespace InkoHX\LeveLibrary\event\xp;
 
-
 use pocketmine\event\Cancellable;
 use pocketmine\event\player\PlayerEvent;
 use pocketmine\Player;
@@ -21,7 +20,7 @@ class PlayerAddXpEvent extends PlayerEvent implements Cancellable
      * PlayerAddXpEvent constructor.
      *
      * @param Player $player
-     * @param int $xp
+     * @param int    $xp
      */
     public function __construct(Player $player, int $xp)
     {
