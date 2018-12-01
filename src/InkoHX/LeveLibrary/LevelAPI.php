@@ -73,7 +73,7 @@ class LevelAPI
         Server::getInstance()->getPluginManager()->callEvent($event);
         if (!$event->isCancelled()) {
             $db = new DataFile($player->getXuid());
-            $db->set('level', self::getLevel($player) + $event->getNewLevel());
+            $db->set('level', self::getLevel($player) + $event->getNewLevel() - self::getLevel($player));
         }
     }
 
