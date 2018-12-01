@@ -7,7 +7,6 @@
 
 namespace InkoHX\LeveLibrary;
 
-
 use pocketmine\utils\Config;
 
 class DataFile
@@ -25,12 +24,12 @@ class DataFile
      */
     public function __construct(string $file)
     {
-        $this->path = LevelAPI::getPath() . $file;
+        $this->path = LevelAPI::getPath().$file;
         @mkdir($this->path, 0755, true);
-        $this->config = new Config($this->path . '/data.json', Config::JSON, [
+        $this->config = new Config($this->path.'/data.json', Config::JSON, [
             'level' => 1,
-            'xp' => 0,
-            'maxxp' => 50
+            'xp'    => 0,
+            'maxxp' => 50,
         ]);
     }
 
@@ -45,8 +44,7 @@ class DataFile
     }
 
     /**
-     * @param string $key
-     *
+     * @param string     $key
      * @param bool|mixed $data
      */
     public function set(string $key, $data): void
