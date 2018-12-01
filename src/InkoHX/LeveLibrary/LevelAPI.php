@@ -37,6 +37,11 @@ class LevelAPI
             self::setXP($player, 0);
         } else {
             self::addXP($player, $xp);
+            if (self::NeededXP($player) <= 0) {
+                self::addMaxXP($player, $max);
+                self::addLevel($player, 1);
+                self::setXP($player, 0);
+            }
         }
     }
 
