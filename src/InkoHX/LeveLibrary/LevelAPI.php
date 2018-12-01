@@ -64,7 +64,7 @@ class LevelAPI
      */
     public static function addLevel(Player $player, int $level): void
     {
-        $event = new PlayerLevelUpEvent($player, self::getLevel($player), $level +self::getLevel($player));
+        $event = new PlayerLevelUpEvent($player, self::getLevel($player), $level + self::getLevel($player));
         Server::getInstance()->getPluginManager()->callEvent($event);
         if (!$event->isCancelled()) {
             $db = new DataFile($player->getXuid());
