@@ -26,13 +26,13 @@ class LevelAPI
      */
     public static function init(): void
     {
-        self::$path = Server::getInstance()->getDataPath() . '/Library/LeveLibrary/';
+        self::$path = Server::getInstance()->getDataPath().'/Library/LeveLibrary/';
     }
 
     /**
      * @param Player $player
-     * @param int $xp
-     * @param int $max
+     * @param int    $xp
+     * @param int    $max
      *
      * @throws \ReflectionException
      */
@@ -54,10 +54,11 @@ class LevelAPI
 
     /**
      * @param Player $player
-     * @param int $level
+     * @param int    $level
+     *
+     * @throws \ReflectionException
      *
      * @return void
-     * @throws \ReflectionException
      */
     public static function setLevel(Player $player, int $level): void
     {
@@ -72,10 +73,11 @@ class LevelAPI
 
     /**
      * @param Player $player
-     * @param int $level
+     * @param int    $level
+     *
+     * @throws \ReflectionException
      *
      * @return void
-     * @throws \ReflectionException
      */
     public static function addLevel(Player $player, int $level): void
     {
@@ -101,10 +103,11 @@ class LevelAPI
 
     /**
      * @param Player $player
-     * @param int $xp
+     * @param int    $xp
+     *
+     * @throws \ReflectionException
      *
      * @return void
-     * @throws \ReflectionException
      */
     public static function setXP(Player $player, int $xp): void
     {
@@ -118,10 +121,11 @@ class LevelAPI
 
     /**
      * @param Player $player
-     * @param int $xp
+     * @param int    $xp
+     *
+     * @throws \ReflectionException
      *
      * @return void
-     * @throws \ReflectionException
      */
     public static function addXP(Player $player, int $xp): void
     {
@@ -147,10 +151,11 @@ class LevelAPI
 
     /**
      * @param Player $player
-     * @param int $max
+     * @param int    $max
+     *
+     * @throws \ReflectionException
      *
      * @return void
-     * @throws \ReflectionException
      */
     public static function setMaxXP(Player $player, int $max): void
     {
@@ -164,10 +169,11 @@ class LevelAPI
 
     /**
      * @param Player $player
-     * @param int $max
+     * @param int    $max
+     *
+     * @throws \ReflectionException
      *
      * @return void
-     * @throws \ReflectionException
      */
     public static function addMaxXP(Player $player, int $max): void
     {
