@@ -64,7 +64,6 @@ class LevelAPI
     {
         $event = new PlayerLevelChangeEvent($player, self::getLevel($player), $level);
         $event->call();
-        Server::getInstance()->getPluginManager()->callEvent($event);
         if (!$event->isCancelled()) {
             $db = new DataFile($player->getXuid());
             $db->set('level', $event->getNewLevel());
