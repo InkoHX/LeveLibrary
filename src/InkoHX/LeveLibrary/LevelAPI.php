@@ -26,9 +26,16 @@ class LevelAPI
      */
     public static function init(): void
     {
-        self::$path = Server::getInstance()->getDataPath().'/Library/LeveLibrary/';
+        self::$path = Server::getInstance()->getDataPath() . '/Library/LeveLibrary/';
     }
 
+    /**
+     * @param Player $player
+     * @param int $xp
+     * @param int $max
+     *
+     * @throws \ReflectionException
+     */
     public static function Auto(Player $player, $xp = 10, $max = 50)
     {
         if (self::getXP($player) >= self::getMaxXP($player)) {
@@ -47,13 +54,15 @@ class LevelAPI
 
     /**
      * @param Player $player
-     * @param int    $level
+     * @param int $level
      *
      * @return void
+     * @throws \ReflectionException
      */
     public static function setLevel(Player $player, int $level): void
     {
         $event = new PlayerLevelChangeEvent($player, self::getLevel($player), $level);
+        $event->call();
         Server::getInstance()->getPluginManager()->callEvent($event);
         if (!$event->isCancelled()) {
             $db = new DataFile($player->getXuid());
@@ -63,14 +72,15 @@ class LevelAPI
 
     /**
      * @param Player $player
-     * @param int    $level
+     * @param int $level
      *
      * @return void
+     * @throws \ReflectionException
      */
     public static function addLevel(Player $player, int $level): void
     {
         $event = new PlayerLevelUpEvent($player, self::getLevel($player), $level + self::getLevel($player));
-        Server::getInstance()->getPluginManager()->callEvent($event);
+        $event->call();
         if (!$event->isCancelled()) {
             $db = new DataFile($player->getXuid());
             $db->set('level', self::getLevel($player) + $event->getNewLevel() - self::getLevel($player));
@@ -91,14 +101,15 @@ class LevelAPI
 
     /**
      * @param Player $player
-     * @param int    $xp
+     * @param int $xp
      *
      * @return void
+     * @throws \ReflectionException
      */
     public static function setXP(Player $player, int $xp): void
     {
         $event = new PlayerXpChangeEvent($player, self::getXP($player), $xp);
-        Server::getInstance()->getPluginManager()->callEvent($event);
+        $event->call();
         if (!$event->isCancelled()) {
             $db = new DataFile($player->getXuid());
             $db->set('xp', $event->getNewXp());
@@ -107,14 +118,15 @@ class LevelAPI
 
     /**
      * @param Player $player
-     * @param int    $xp
+     * @param int $xp
      *
      * @return void
+     * @throws \ReflectionException
      */
     public static function addXP(Player $player, int $xp): void
     {
         $event = new PlayerAddXpEvent($player, $xp);
-        Server::getInstance()->getPluginManager()->callEvent($event);
+        $event->call();
         if (!$event->isCancelled()) {
             $db = new DataFile($player->getXuid());
             $db->set('xp', self::getXP($player) + $event->getXp());
@@ -135,14 +147,15 @@ class LevelAPI
 
     /**
      * @param Player $player
-     * @param int    $max
+     * @param int $max
      *
      * @return void
+     * @throws \ReflectionException
      */
     public static function setMaxXP(Player $player, int $max): void
     {
         $event = new PlayerMaxXpChangeEvent($player, self::getMaxXP($player), $max);
-        Server::getInstance()->getPluginManager()->callEvent($event);
+        $event->call();
         if (!$event->isCancelled()) {
             $db = new DataFile($player->getXuid());
             $db->set('maxxp', $event->getNewMax());
@@ -151,14 +164,15 @@ class LevelAPI
 
     /**
      * @param Player $player
-     * @param int    $max
+     * @param int $max
      *
      * @return void
+     * @throws \ReflectionException
      */
     public static function addMaxXP(Player $player, int $max): void
     {
         $event = new PlayerAddMaxXpEvent($player, $max);
-        Server::getInstance()->getPluginManager()->callEvent($event);
+        $event->call();
         if (!$event->isCancelled()) {
             $db = new DataFile($player->getXuid());
             $db->set('maxxp', self::getMaxXP($player) + $event->getMax());

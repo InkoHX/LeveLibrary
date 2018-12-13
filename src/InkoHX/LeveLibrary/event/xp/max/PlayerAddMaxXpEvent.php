@@ -20,7 +20,7 @@ class PlayerAddMaxXpEvent extends PlayerEvent implements Cancellable
      * PlayerAddMaxXpEvent constructor.
      *
      * @param Player $player
-     * @param int    $max
+     * @param int $max
      */
     public function __construct(Player $player, int $max)
     {

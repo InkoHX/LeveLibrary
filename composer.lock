@@ -4,31 +4,71 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f2d039a0b27bca7efaf35d9a75a28619",
+    "content-hash": "fcde745d5f129c80a7e064f0fe465722",
     "packages": [
         {
-            "name": "fgrosse/phpasn1",
-            "version": "2.0.1",
+            "name": "daverandom/callback-validator",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/fgrosse/PHPASN1.git",
-                "reference": "0e27e71e3d0a8d5c3f1471d727fd9574d920f33c"
+                "url": "https://github.com/DaveRandom/CallbackValidator.git",
+                "reference": "d87a08cddbc6099816ed01e50ce25cdfc43b542f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fgrosse/PHPASN1/zipball/0e27e71e3d0a8d5c3f1471d727fd9574d920f33c",
-                "reference": "0e27e71e3d0a8d5c3f1471d727fd9574d920f33c",
+                "url": "https://api.github.com/repos/DaveRandom/CallbackValidator/zipball/d87a08cddbc6099816ed01e50ce25cdfc43b542f",
+                "reference": "d87a08cddbc6099816ed01e50ce25cdfc43b542f",
                 "shasum": ""
             },
             "require": {
-                "ext-gmp": "*",
+                "ext-reflection": "*",
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "DaveRandom\\CallbackValidator\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Chris Wright",
+                    "email": "cw@daverandom.com"
+                }
+            ],
+            "description": "Tools for validating callback signatures",
+            "time": "2017-04-03T15:22:41+00:00"
+        },
+        {
+            "name": "fgrosse/phpasn1",
+            "version": "v2.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fgrosse/PHPASN1.git",
+                "reference": "7ebf2a09084a7bbdb7b879c66fdf7ad80461bbe8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fgrosse/PHPASN1/zipball/7ebf2a09084a7bbdb7b879c66fdf7ad80461bbe8",
+                "reference": "7ebf2a09084a7bbdb7b879c66fdf7ad80461bbe8",
+                "shasum": ""
+            },
+            "require": {
                 "php": ">=7.0.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "~6.3",
-                "satooshi/php-coveralls": "dev-master"
+                "satooshi/php-coveralls": "~2.0"
             },
             "suggest": {
+                "ext-gmp": "GMP is the preferred extension for big integer calculations",
                 "php-curl": "For loading OID information from the web if they have not bee defined statically"
             },
             "type": "library",
@@ -73,31 +113,31 @@
                 "x509",
                 "x690"
             ],
-            "time": "2017-12-17T10:21:51+00:00"
+            "time": "2018-12-02T01:34:34+00:00"
         },
         {
             "name": "mdanter/ecc",
-            "version": "v0.5.0",
+            "version": "v0.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpecc/phpecc.git",
-                "reference": "ed5c6d496f5310de1b7071b8375fafa3559a1344"
+                "reference": "b95f25cc1bacc83a9f0ccd375900b7cfd343029e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpecc/phpecc/zipball/ed5c6d496f5310de1b7071b8375fafa3559a1344",
-                "reference": "ed5c6d496f5310de1b7071b8375fafa3559a1344",
+                "url": "https://api.github.com/repos/phpecc/phpecc/zipball/b95f25cc1bacc83a9f0ccd375900b7cfd343029e",
+                "reference": "b95f25cc1bacc83a9f0ccd375900b7cfd343029e",
                 "shasum": ""
             },
             "require": {
                 "ext-gmp": "*",
-                "fgrosse/phpasn1": "v2.0.x",
-                "php": ">=7.0"
+                "fgrosse/phpasn1": "^2.0",
+                "php": "^7.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "^6.0",
-                "squizlabs/php_codesniffer": "~2",
-                "symfony/yaml": "~2.6|~3.0"
+                "squizlabs/php_codesniffer": "^2.0",
+                "symfony/yaml": "^2.6|^3.0"
             },
             "type": "library",
             "autoload": {
@@ -145,7 +185,7 @@
                 "secp256k1",
                 "secp256r1"
             ],
-            "time": "2017-10-09T16:05:37+00:00"
+            "time": "2018-12-03T18:17:01+00:00"
         },
         {
             "name": "pocketmine/binaryutils",
@@ -197,13 +237,14 @@
         },
         {
             "name": "pocketmine/nbt",
-            "version": "0.2.2",
+            "version": "0.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pmmp/NBT",
-                "reference": "474f0cf0a47656d0122b4f3f71302e694ed6977b"
+                "reference": "291bf5cc2a94500eada1edbda51d15bed25a1e1c"
             },
             "require": {
+                "ext-zlib": "*",
                 "php": ">=7.2.0",
                 "php-64bit": "*",
                 "pocketmine/binaryutils": "^0.1.0"
@@ -223,17 +264,18 @@
                 "LGPL-3.0"
             ],
             "description": "PHP library for working with Named Binary Tags",
-            "time": "2018-10-12T08:26:44+00:00"
+            "time": "2018-12-03T16:08:28+00:00"
         },
         {
             "name": "pocketmine/pocketmine-mp",
-            "version": "3.3.2",
+            "version": "3.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pmmp/PocketMine-MP",
-                "reference": "200de3fe8460d180a4fd9f5a0e0768bd3085fd50"
+                "reference": "2323601f98bf5f48901cd57b96d0e680a7d5e56e"
             },
             "require": {
+                "daverandom/callback-validator": "dev-master",
                 "ext-bcmath": "*",
                 "ext-ctype": "*",
                 "ext-curl": "*",
@@ -278,7 +320,7 @@
             ],
             "description": "A server software for Minecraft: Pocket Edition written in PHP",
             "homepage": "https://pmmp.io",
-            "time": "2018-11-11T11:58:25+00:00"
+            "time": "2018-12-12T19:03:07+00:00"
         },
         {
             "name": "pocketmine/raklib",
@@ -363,7 +405,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "ext-pthreads": 20
+        "ext-pthreads": 20,
+        "daverandom/callback-validator": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
